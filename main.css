@@ -1,0 +1,49 @@
+*{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+.center{
+    margin: 0 auto;
+    width: 95%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h5{
+    color: white;
+}
+
+header{
+    height: 50px;
+    background-color: black;
+
+}
+
+
+ul li{
+    display: inline-block;
+    margin-top: 10px;
+}
+ ul li a {
+     margin-left: 20px; 
+     color: white;
+     font-weight: 100;
+ }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

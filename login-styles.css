@@ -1,0 +1,63 @@
+*{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+
+.card{
+    border: none;
+    margin: 0 auto;
+    width: 65%;
+    text-align: center;
+}
+.card .form-group{
+    position: relative;
+    text-align: left;
+}
+button{
+    margin-bottom: 2%;
+    width: 40%;
+}
+
+#register{
+    float: right;
+
+}
+
+#eye{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#eye:hover{
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+
+}
+
+
+#login-button{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
