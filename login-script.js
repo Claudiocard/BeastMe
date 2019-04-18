@@ -14,27 +14,27 @@ function getUsers() {
         async: true,
         success: logUsers,
         error: errorCallback
-    
-
-
-
-    /***********
-     * Login
-     */
-
-    $("#login-button").click(function (event) {
-        var usernameInput = $("#username").val();
-        var passwordInput = $("#password").val();
-
-        var isLogged = arrOfUser.some(function (element) {
-            return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
-        })
-
-        if (isLogged) {
-            window.location.href = "register.html";
-        }
     });
 }
+
+
+/***********
+ * Login
+ */
+
+$("#login-button").click(function (event) {
+    var usernameInput = $("#username").val();
+    var passwordInput = $("#password").val();
+
+    var isLogged = arrOfUser.some(function (element) {
+        return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
+    })
+
+    if (isLogged) {
+        window.location.href = "register.html";
+    }
+});
+
 
 function logUsers(response) {
     console.log(response);
