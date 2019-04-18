@@ -13,6 +13,8 @@ $(document).ready(function () {
     
     console.log("Doc ready");
     var arrOfUser;
+    var userOnline;
+    var userMatch;
     getUsers();
     
 });
@@ -153,8 +155,6 @@ function addUser(event) {
 
 }
 
-
-
 function goToQuestions(response) {
 
     window.location.href = "questions.html";
@@ -190,3 +190,26 @@ function goToProfile() {
     console.log(arrOfUser[arrOfUser.length - 1])
     console.log("profile");
 }
+
+
+
+/***********
+ * Match
+ ***********/
+function matching(){
+    var avarageFromAllUsers = [];
+
+    arrOfUser.forEach(function(element){
+        var avg = ((userOnline.q1 - element.q1)+(userOnline.q2 - element.q2)+(userOnline.q3 - element.q3)+(userOnline.q4 - element.q4)+(userOnline.q5 - element.q5)+ (userOnline.q6 - element.q6))/6;
+        avarageFromAllUsers.push(avg);
+    });
+
+    var max = Math.max.apply(null, avarageFromAllUsers);
+    var index = avarageFromAllUsers.indexOf(max);
+    userMatch = arrOfUser[index];
+
+    
+}
+
+
+
