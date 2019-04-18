@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 
+
     $("#next-btn").click(addUser);
     console.log("Doc ready");
     var arrOfUser;
@@ -16,6 +17,7 @@ function getUsers() {
         error: errorCallback
     });
 }
+
 
 
 /***********
@@ -63,12 +65,14 @@ $("#login-button").click(function (event) {
         startChat(usernameInput);
     }
 
+
 });
 /***********
  * Eye
  */
 
 var eye = $("#eye");
+
 
 eye.click(function () {
     var pass = $("#password");
