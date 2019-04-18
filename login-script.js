@@ -139,7 +139,7 @@ $(document).ready(function () {
             console.log("question 6: " + user.getQ6()) 
         });
 
-        $("#next-btn").click(function (event) {
+        $("#quizz-nxt-btn").click(function (event) {
             window.location.href="profile.html"; 
         })
         
