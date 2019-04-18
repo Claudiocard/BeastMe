@@ -1,0 +1,26 @@
+[
+    {
+        "name": "André Lança",
+        "username": "andrelanca14",
+        "password": "asd123",
+        "email": "andrelanca14@gmail.com"
+    },
+    {
+        "name": "Pedro Campos",
+        "username": "pcampos",
+        "password": "pcampos",
+        "email": "pcampos@gmail.com"
+    }, 
+    {
+        "name": "Ana Serafim",
+        "username": "serafim19",
+        "password": "ser12",
+        "email": "anaserafim@gmail.com"
+    },
+    {
+        "name": "Fábio Sequeira",
+        "username": "fabiolous",
+        "password": "fbio",
+        "email": "fabio@gmail.com"
+    }
+]
