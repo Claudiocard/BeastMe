@@ -68,12 +68,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 h5{
-    color: white;
-    font-size: 1.2em;
+    color: gray;
+    font-size: 1.4em;
 }
 
 header{
@@ -81,7 +81,7 @@ header{
     height: 50px;
     background-color: black;
     z-index: 100;
-
+    
 }
 
 

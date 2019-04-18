@@ -78,7 +78,7 @@ $("#login-button").click(function (event) {
     })
 
     if (isLogged) {
-        window.location.href = "register.html";
+        window.location.href = "mismatch.html";
     }
 });
 
@@ -97,21 +97,6 @@ function errorCallback(request) {
  * Login
  */
 
-$("#login-button").click(function (event) {
-    var usernameInput = $("#username").val();
-    var passwordInput = $("#password").val();
-
-    var isLogged = arrOfUser.some(function (element) {
-        return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
-
-    })
-
-    if (isLogged) {
-        startChat(usernameInput);
-    }
-
-
-});
 /***********
  * Eye
  */
