@@ -12,6 +12,9 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="normalize.css" type="text/css">
     <link rel="stylesheet" href="questions-styles.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="login-script.js"></script>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <div class="question">
             <h2>Parents are the best teachers?</h2>
 
-            <form class="answers">
+            <form class="answers" id="q1">
                 <div class="quest-wrapper">
                     <input type="radio" name="quest1" value="1"> Strongly Desagree
                     <br>
@@ -49,26 +52,26 @@
 
         <div class="question">
             <h2>Do You Believe In The Paranormal And Would You Go Ghost Hunting?</h2>
-            <form class="answers">
+            <form class="answers" id="q2">
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="1"> Strongly Desagree
+                    <input type="radio" name="quest2" value="1"> Strongly Desagree
                     <br>
                 </div>
 
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="2"> Desagree
+                    <input type="radio" name="quest2" value="2"> Desagree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="3"> I don't know
+                    <input type="radio" name="quest2" value="3"> I don't know
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="4"> Agree
+                    <input type="radio" name="quest2" value="4"> Agree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="5"> Strongly Agree
+                    <input type="radio" name="quest2" value="5"> Strongly Agree
                     <br>
                 </div>
             </form>
@@ -77,26 +80,26 @@
 
         <div class="question">
             <h2>Internet is better than TV?</h2>
-            <form class="answers">
+            <form class="answers" id="q3">
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="1"> Strongly Desagree
+                    <input type="radio" name="quest3" value="1"> Strongly Desagree
                     <br>
                 </div>
 
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="2"> Desagree
+                    <input type="radio" name="quest3" value="2"> Desagree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="3"> I don't know
+                    <input type="radio" name="quest3" value="3"> I don't know
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="4"> Agree
+                    <input type="radio" name="quest3" value="4"> Agree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="5"> Strongly Agree
+                    <input type="radio" name="quest3" value="5"> Strongly Agree
                     <br>
                 </div>
             </form>
@@ -105,26 +108,26 @@
 
         <div class="question">
             <h2>Pineapple on pizza?</h2>
-            <form class="answers">
+            <form class="answers" id="q4">
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="1"> Strongly Desagree
+                    <input type="radio" name="quest4" value="1"> Strongly Desagree
                     <br>
                 </div>
 
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="2"> Desagree
+                    <input type="radio" name="quest4" value="2"> Desagree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="3"> I don't know
+                    <input type="radio" name="quest4" value="3"> I don't know
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="4"> Agree
+                    <input type="radio" name="quest4" value="4"> Agree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="5"> Strongly Agree
+                    <input type="radio" name="quest4" value="5"> Strongly Agree
                     <br>
                 </div>
             </form>
@@ -133,26 +136,26 @@
 
         <div class="question">
             <h2>It doesn't matter whether you enjoy your job or not as long as it's a well-paid job.</h2>
-            <form class="answers">
+            <form class="answers" id="q5">
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="1"> Strongly Desagree
+                    <input type="radio" name="quest5" value="1"> Strongly Desagree
                     <br>
                 </div>
 
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="2"> Desagree
+                    <input type="radio" name="quest5" value="2"> Desagree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="3"> I don't know
+                    <input type="radio" name="quest5" value="3"> I don't know
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="4"> Agree
+                    <input type="radio" name="quest5" value="4"> Agree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="5"> Strongly Agree
+                    <input type="radio" name="quest5" value="5"> Strongly Agree
                     <br>
                 </div>
             </form>
@@ -161,26 +164,26 @@
 
         <div class="question">
             <h2>Are you in favor of the death penalty?</h2>
-            <form class="answers">
+            <form class="answers" id="q6">
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="1"> Strongly Desagree
+                    <input type="radio" name="quest6" value="1"> Strongly Desagree
                     <br>
                 </div>
 
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="2"> Desagree
+                    <input type="radio" name="quest6" value="2"> Desagree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="3"> I don't know
+                    <input type="radio" name="quest6" value="3"> I don't know
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="4"> Agree
+                    <input type="radio" name="quest6" value="4"> Agree
                     <br>
                 </div>
                 <div class="quest-wrapper">
-                    <input type="radio" name="quest1" value="5"> Strongly Agree
+                    <input type="radio" name="quest6" value="5"> Strongly Agree
                     <br>
                 </div>
             </form>
