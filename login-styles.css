@@ -127,6 +127,12 @@ button{
     border:none;
     border-bottom: 1px solid black;
     outline: none;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.form-control:focus{
+    opacity: 1;
 }
 
 *:focus{
