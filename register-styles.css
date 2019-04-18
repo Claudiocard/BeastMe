@@ -9,6 +9,8 @@ body{
     width: 100%;
 }
 
+
+
 .wrapper{
     width: 70%;
     margin: 0 auto;
@@ -21,11 +23,6 @@ h1{
     text-align: center;
 }
 
-h5{
-    margin-top: 10%;
-    
-
-}
 .input-form{
     width: 100%;
     margin-top: 15%;
@@ -51,4 +48,55 @@ h5{
     transition: all 0.3s;
     background-color: black;
     color: white;
+}
+
+
+
+html, 
+body {
+    height: 100%;
+}
+
+.center{
+    margin: 0 auto;
+    width: 85%;
+}
+
+.wrapper-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h5{
+    color: white;
+    font-size: 1.2em;
+}
+
+header{
+    position: relative;
+    height: 50px;
+    background-color: black;
+    z-index: 100;
+
+}
+
+
+ul li{
+    display: inline-block;
+    margin-top: 10px;
+}
+ul li a {
+
+     margin-left: 20px; 
+     color:rgb(155, 155, 155);
+     font-weight: 100;
+     transition: 0.3s;
+}
+
+ul li a:hover{
+    
+    color: white;
+    transition: 0.3s;
 }
