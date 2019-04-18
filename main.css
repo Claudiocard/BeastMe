@@ -17,7 +17,7 @@ body{
 }
 .center{
     margin: 0 auto;
-    width: 95%;
+    width: 85%;
 }
 
 .wrapper{
@@ -29,7 +29,7 @@ body{
 
 h5{
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 header{
@@ -112,6 +112,43 @@ ul li{
     background-color: white;
     width: 100%;
 }
+
+.center-half{
+    margin: 0 auto;
+    width: 40%;
+}
+
+.center-half h1{
+    margin-top: 25%;
+    margin-bottom: 100px;
+    padding: 30px;
+    border: 10px solid black;
+}
+.chat{
+    background-color: cornflowerblue;
+    width: 100%;
+}
+
+.chat .baloons{
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    margin: 5% 0% 3% 0%;
+    color: white;
+}
+
+.chat .chat-text{
+    color: white;
+    text-align: center;
+    padding-bottom: 7%;
+}
+
+
+
+
+
+
+
 
 
 
