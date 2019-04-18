@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    
+
 
     function User(fullname, username, password, email) {
         this.getFullname = function () {
@@ -23,6 +25,7 @@ $(document).ready(function () {
 
     var arrOfUser = [andre, pedro, ana, fabio];
 
+    var arr = sessionStorage.setItem("arrOfUser", arrOfUser);
 
 
     /***********
@@ -65,6 +68,8 @@ $(document).ready(function () {
 
         arrOfUser.push(new User($("#nameInput").val(), $("#userInput").val(), $("#passInput").val(), $("#emailInput").val()));
         console.log(arrOfUser);
+        window.location.href = "login.html";
+        arr = sessionStorage.getItem("arrOfUser");
  
     })
      
@@ -73,7 +78,7 @@ $(document).ready(function () {
 
 
 
-
+    console.log(arrOfUser);
 
 
 
