@@ -12,47 +12,52 @@ $(document).ready(function () {
     $("#quizz-btn").click(updateUser);
     
     console.log("Doc ready");
-    var arrOfUser;
-    var userOnline;
+    var arrOfUser
+   
     var userMatch;
-    getUsers();
+    getUsers()
     
+    var userIdOnline = localStorage.getItem('userid')
+    console.log('userOnlineId: ' +userIdOnline)
+
+    var usernameOnline = localStorage.getItem('username')
+    console.log(usernameOnline)
 });
 
 function checkQ1() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest1]:checked', '#q1').val();
+    var ae = Number($('input[name=quest1]:checked', '#q1').val());
     user['q1'] = ae;
     console.log("question 1: " + user.q1);
 }
 
 function checkQ2() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest2]:checked', '#q2').val();
+    var ae = Number($('input[name=quest2]:checked', '#q2').val());
     user['q2'] = ae;
     console.log("question 2: " + user.q2);
 }
 function checkQ3() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest3]:checked', '#q3').val();
+    var ae = Number($('input[name=quest3]:checked', '#q3').val());
     user['q3'] = ae;
     console.log("question 3: " + user.q3);
 }
 function checkQ4() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest4]:checked', '#q4').val();
+    var ae = Number($('input[name=quest4]:checked', '#q4').val());
     user['q4'] = ae;
     console.log("question 4: " + user.q4);
 }
 function checkQ5() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest5]:checked', '#q5').val();
+    var ae = Number($('input[name=quest5]:checked', '#q5').val());
     user['q5'] = ae;
     console.log("question 5: " + user.q5);
 }
 function checkQ6() {
     var user = arrOfUser[arrOfUser.length - 1];
-    var ae = $('input[name=quest6]:checked', '#q6').val();
+    var ae = Number($('input[name=quest6]:checked', '#q6').val());
     user['q6'] = ae;
     console.log("question 6: " + user.q6);
 }
@@ -70,20 +75,6 @@ function getUsers() {
 /***********
  * Login
  */
-
-$("#login-button").click(function (event) {
-    var usernameInput = $("#username").val();
-    var passwordInput = $("#password").val();
-
-    var isLogged = arrOfUser.some(function (element) {
-        return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
-    })
-
-    if (isLogged) {
-        window.location.href = "register.html";
-    }
-});
-
 
 function logUsers(response) {
     console.log(response);
@@ -103,13 +94,15 @@ $("#login-button").click(function (event) {
     var usernameInput = $("#username").val();
     var passwordInput = $("#password").val();
 
-    var isLogged = arrOfUser.some(function (element) {
-        return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
+    var isLogged = arrOfUser.find(function (element) {
+        return element.username === usernameInput && element.password === passwordInput;
 
     })
 
-    if (isLogged) {
-        startChat(usernameInput);
+    if (isLogged !== undefined) {
+        localStorage.setItem('userid', isLogged.id);
+        localStorage.setItem('username',isLogged.username)
+        goToChat();
     }
 
 
@@ -155,13 +148,15 @@ function addUser(event) {
 
 }
 
-function goToQuestions(response) {
+function goToQuestions() {
 
     window.location.href = "questions.html";
 }
 
 function updateUser() {
-    var userToUpdate = arrOfUser[arrOfUser.length - 1];
+    var userToUpdate = arrOfUser[arrOfUser.length - 1]
+    localStorage.setItem('userid', userToUpdate.id)
+    localStorage.setItem('userName', userToUpdate.username)
     console.log("updating");
     $.ajax({
         url: 'http://192.168.250.90:8080/beastme/' + userToUpdate.id,
@@ -181,14 +176,24 @@ function updateUser() {
         }),
         async: true,
         contentType: 'application/json',
-        success: goToProfile,
+        success: function(){goToChat()},
         error: errorCallback
     });
 }
 
-function goToProfile() {
-    console.log(arrOfUser[arrOfUser.length - 1])
-    console.log("profile");
+function goToChat() {
+    var id = localStorage.getItem('userid')
+    var userOnline = arrOfUser[id-1] 
+    matching.apply(userOnline) 
+    window.location.href = 'chat.html'
+    
+}
+
+function sayhi(){
+    var testText = $('#test')
+    var user1ID = userIdOnline
+    var user1 = arrOfUser[user1ID-1]
+   testText.innerHTML = user1.username
 }
 
 
@@ -200,14 +205,22 @@ function matching(){
     var avarageFromAllUsers = [];
 
     arrOfUser.forEach(function(element){
-        var avg = ((userOnline.q1 - element.q1)+(userOnline.q2 - element.q2)+(userOnline.q3 - element.q3)+(userOnline.q4 - element.q4)+(userOnline.q5 - element.q5)+ (userOnline.q6 - element.q6))/6;
+        var a = Math.abs(this.q1-element.q1)
+        var b = Math.abs(this.q2-element.q2)
+        var c = Math.abs(this.q3-element.q3)
+        var d = Math.abs(this.q4-element.q4)
+        var e = Math.abs(this.q5-element.q5)
+        var f = Math.abs(this.q6-element.q6)
+        var avg = (a+b+c+d+e+f)
         avarageFromAllUsers.push(avg);
     });
 
     var max = Math.max.apply(null, avarageFromAllUsers);
     var index = avarageFromAllUsers.indexOf(max);
     userMatch = arrOfUser[index];
-
+    localStorage.setItem('matchIndex',index)
+ console.log(userMatch)
+ console.log(localStorage.getItem('matchIndex'))
     
 }
 
