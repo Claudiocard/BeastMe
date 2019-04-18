@@ -13,13 +13,29 @@
     <link rel="stylesheet" href="normalize.css" type="text/css">
     <link rel="stylesheet" href="questions-styles.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="login-script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <h1>Quizz</h1>
+    <header>
+        <div class="center">
+            <div class="wrapper-header">
+                <h5><a href="index.html">Beastie</a></h5>
+                <ul class="clearfix">
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a>
+                    </li>
+                    <li><a href="mismatch.html">Mismatch</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="quizz">Quizz</h1>
 
     <div class="questions-wrapper">
         <div class="question">
@@ -49,7 +65,10 @@
             </form>
         </div>
 
+        <hr>
+
         <div class="question">
+            
             <h2>Do you believe in the Paranormal and would you go Ghost Hunting?</h2>
             <form class="answers" id="q2">
                 <div class="quest-wrapper">
@@ -76,6 +95,7 @@
             </form>
 
         </div>
+        <hr>
 
         <div class="question">
             <h2>Internet is better than TV?</h2>
@@ -104,7 +124,7 @@
             </form>
 
         </div>
-
+        <hr>
         <div class="question">
             <h2>Pineapple on pizza?</h2>
             <form class="answers" id="q4">
@@ -132,7 +152,7 @@
             </form>
 
         </div>
-
+        <hr>
         <div class="question">
             <h2>It doesn't matter whether you enjoy your job or not as long as it's a well-paid job.</h2>
             <form class="answers" id="q5">
@@ -160,6 +180,7 @@
             </form>
 
         </div>
+        <hr>
 
         <div class="question">
             <h2>Are you in favor of the death penalty?</h2>
@@ -192,7 +213,19 @@
         <button class="next-btn" id="quizz-btn">NEXT</button>
         <a href="profile.html">
         </a>
+
+        
     </div>
+    <hr>
+    <footer>
+            <a href="#">
+                <div class="back-to-top">
+                    <i class="fas fa-chevron-up top-arrow"></i>
+                    <p>Top</p>
+                </div>
+            </a>
+        </footer>
+    
 
 </body>
 
