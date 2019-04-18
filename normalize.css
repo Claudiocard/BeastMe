@@ -265,13 +265,7 @@ textarea {
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+ *
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
@@ -370,11 +364,8 @@ a:active {
 } 
 
 textarea:hover, 
-input:hover, 
 textarea:active, 
-input:active, 
 textarea:focus, 
-input:focus,
 button:focus,
 button:active,
 button:hover,
