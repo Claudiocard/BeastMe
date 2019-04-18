@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 function getUsers() {
     $.ajax({
-        url: "http://localhost:8080/beastme/",
+        url: "http://192.168.250.90:8080/beastme/",
         async: true,
         success: logUsers,
         error: errorCallback
@@ -91,7 +91,7 @@ eye.click(function () {
 function addUser(event) {
     console.log("trying to add")
     $.ajax({
-        url: 'http://localhost:8080/beastme/',
+        url: 'http://192.168.250.90:8080/beastme/',
         type: 'POST',
         data: JSON.stringify({
             name: $("#nameInput").val(),
