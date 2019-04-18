@@ -4,15 +4,88 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 body{
     width: 100%;
 }
 
+
+html, 
+body {
+    height: 100%;
+}
+
+.center{
+    margin: 0 auto;
+    width: 85%;
+}
+
+.wrapper-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h5{
+    color: white;
+    font-size: 1.2em;
+}
+
+header{
+    position: relative;
+    height: 50px;
+    background-color: black;
+    z-index: 100;
+
+}
+h2{
+    text-align: center;
+    
+}
+
+hr{
+    margin: 10% 0%;
+}
+
+@media screen and (min-width:960px){
+    h2{
+        margin-top: 8%;
+    }
+    hr{
+        margin-top: 8% ;
+        margin-bottom: 3% ;
+    }
+    .quizz{
+        font-size: 3.8em;
+    }
+}
+
+ul li{
+    display: inline-block;
+    margin-top: 10px;
+}
+ul li a {
+
+     margin-left: 20px; 
+     color:rgb(155, 155, 155);
+     font-weight: 100;
+     transition: 0.3s;
+}
+
+ul li a:hover{
+    
+    color: white;
+    transition: 0.3s;
+}
+
 h1{
     text-align: center;
     font-size: 1.3em;
-    margin-top: 10%;
+    margin: 5% 0%;
+
 }
 
 .question h1{
@@ -51,4 +124,38 @@ h1{
 .questions-wrapper{
     margin: 0 auto;
     width: 70%;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: -1;
+}
+
+.back-to-top{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    float: right;
+    margin-right: 7.5%;
+    padding-top: 10px;
+    
+}
+
+.top-arrow, .back-to-top{
+    color: white;
+}
+
+
+.register-btn{
+    text-align: center;
+    display: block;
+    background: none;
+    margin: 0 auto;
+    border: 2px solid white;
+    color: white;
+    transition: 0.3s;
+    padding: 16px 40px;
 }

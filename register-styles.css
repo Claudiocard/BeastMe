@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 body{
     width: 100%;
@@ -100,3 +102,53 @@ ul li a:hover{
     color: white;
     transition: 0.3s;
 }
+
+
+
+/************
+* PROFILE
+************/
+
+.user-info{
+    width: 70%;
+    
+    margin: 0 auto;
+}
+
+.input-style{
+    margin-top: 30px;
+    width: 100%;
+    color: black;
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.input-style:focus{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+#name{
+    margin-top: 10%;
+}
+
+.save{
+    float: right;
+    margin-top: 5%;
+    border: 1px solid black;
+    padding: 14px 22px;
+    max-width: 960px;
+    transition: 0.3s;
+}
+
+.save:hover{
+    color: white;
+    background-color: black;
+}
+
+
+

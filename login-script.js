@@ -73,8 +73,8 @@ $("#login-button").click(function (event) {
     var usernameInput = $("#username").val();
     var passwordInput = $("#password").val();
 
-    var isLogged = arrOfUser.some(function (element) {
-        return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
+    var isLogged = arrOfUser.some(function (element) {        
+        return element.username === usernameInput && element.password === passwordInput;
     })
 
     if (isLogged) {
