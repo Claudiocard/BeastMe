@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $("#next-btn").click(addUser);
     console.log("Doc ready");
     var arrOfUser;
@@ -13,6 +14,25 @@ function getUsers() {
         async: true,
         success: logUsers,
         error: errorCallback
+    
+
+
+
+    /***********
+     * Login
+     */
+
+    $("#login-button").click(function (event) {
+        var usernameInput = $("#username").val();
+        var passwordInput = $("#password").val();
+
+        var isLogged = arrOfUser.some(function (element) {
+            return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
+        })
+
+        if (isLogged) {
+            window.location.href = "register.html";
+        }
     });
 }
 
@@ -36,6 +56,7 @@ $("#login-button").click(function (event) {
 
     var isLogged = arrOfUser.some(function (element) {
         return element.getUsername() === usernameInput && element.getPassword() === passwordInput;
+
     })
 
     if (isLogged) {
@@ -54,6 +75,7 @@ eye.click(function () {
 
     if (pass.prop('type', 'password')) {
         pass.prop('type', 'text');
+
 
     }
 });
@@ -80,6 +102,7 @@ function addUser(event) {
     });
 
 }
+
 
 
 function goToQuestions(response) {
